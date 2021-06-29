@@ -1,0 +1,17 @@
+<section class="products">
+  <div class="container">
+      <ul class="row">
+        <li *ngFor="let item of productList; index as i" class="card col-xl-3 col-lg-3 col-md-3 col-sm-3">
+          <a href="#FIXME" title="samsung J2 Pro" class="card-body">
+            <!-- {{item | json}} -->
+            <figure>
+              <img src="{{item.productImgUrl}}" alt="{{item.productName}}">
+            </figure>
+            <h2 class="card-title">{{item.productName}}</h2>
+            <p class="card-text">{{item.productPrice}}</p>
+            <button class="btn btn-primary" type="button" (click)="onAdd(item)">add to cart</button>
+          </a>
+      </li>
+      </ul>
+  </div>
+</section>
